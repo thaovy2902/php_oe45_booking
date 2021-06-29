@@ -3,6 +3,9 @@
 /public/storage
 /public/assets
 /public/bower_components
+/public/css
+/public/js
+/resources/assets
 /storage/*.key
 .env
 .env.backup
@@ -20,5 +23,3 @@ yarn-error.log
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
-
-public/bower_components/
