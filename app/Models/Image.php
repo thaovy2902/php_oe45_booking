@@ -14,4 +14,8 @@ class Image extends Model
         'object-type',
         'object-id',
     ];
+    public function tour()
+    {
+        return $this->belongsTo(Tour::class, 'object-id', 'id');
+    }
 }

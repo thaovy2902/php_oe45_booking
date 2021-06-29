@@ -229,5 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    'default_paginate_tour' => '9',
+    'default_paginate_blog' => '6'
 
 ];

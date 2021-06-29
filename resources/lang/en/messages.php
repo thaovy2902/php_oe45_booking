@@ -35,13 +35,14 @@ return [
     'nights' => 'nights',
     'night' => 'night',
     'quote_blog' => 'Life is either a daring adventure or nothing at all.',
-    'quote_tour' => 'Take a 360-degree tour of some of the country\'s most compelling natural wonders and cultural attractions right here.',
+    'quote_tour' => 'Take a 360-degree tour of some of the country\'s 
+                    most compelling natural wonders and cultural attractions right here.',
     'learn_more' => 'Learn more...',
     'tour_travel' => 'Tour And Travel',
     'promotion' => 'Super Promotion',
     'summer' => 'Summer Experience',
     'tour_spot' => 'Tourist Spots',
-    'quote_des' =>'The world is a book, and those who do not travel read only one page.',
+    'quote_des' => 'The world is a book, and those who do not travel read only one page.',
     'customer_support' => 'Customer Support',
     'hotline' => 'Hotline',
     'address' => 'Address',
@@ -72,8 +73,14 @@ return [
     'best_places' => 'Best Places',
     'affordable' => 'Affordable',
     'feedback1' => 'It was a wonderful experience for us. All your arrangements were up to the mark.',
-    'feedback2' => 'Everything was perfect, and I would have to say it was the vacation of a life time. I will do all I can to promote your company and your services. Thank you so very much for having arranged the magnificent trip we took',
+    'feedback2' => 'Everything was perfect, and I would have to say it was the vacation of a life time. 
+                    I will do all I can to promote your company and your services. 
+                    Thank you so very much for having arranged the magnificent trip we took',
     'feedback3' => 'We will recommend Amerika Venture to our friends in the UK. Many thanks for a good trip.',
     'contact_info' => 'Contact Information',
     'send_msg' => 'Send Message',
+    'not_found_tour' => 'Not Found Tour',
+    'leave_reply' => 'Leave Reply',
+    'write_cmt' => 'Write Comment',
+    'aboard' => 'Aboard Tour',
 ];

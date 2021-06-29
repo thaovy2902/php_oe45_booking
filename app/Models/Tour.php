@@ -17,4 +17,9 @@ class Tour extends Model
         'cat_tour_id',
         'rating',
     ];
+
+    public function images()
+    {
+        return $this->hasMany(Image::class, 'object-id', 'id');
+    }
 }

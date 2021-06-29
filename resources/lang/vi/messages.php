@@ -35,13 +35,14 @@ return [
     'night' => 'đêm',
     'nights' => 'đêm',
     'quote_blog' => 'Cuộc đời này có thể là một chuyến phiêu lưu táo bạo, hoặc không là gì cả.',
-    'quote_tour' => 'Tham gia chuyến hành trình khám phá 360 độ về kỳ quan thiên nhiên và văn hóa độc đáo của đất nước ngay tại đây.',
+    'quote_tour' => 'Tham gia chuyến hành trình khám phá 360 độ về kỳ 
+                    quan thiên nhiên và văn hóa độc đáo của đất nước ngay tại đây.',
     'learn_more' => 'Đọc thêm...',
     'tour_travel' => 'Tham Quan Và Du Lịch',
     'promotion' => 'Siêu khuyến mãi',
     'summer' => 'Trải Nghiệm Mùa Hè',
     'tour_spot' => 'Điểm Du Lịch',
-    'quote_des' =>'Thế giới như một cuốn sách, bất kỳ ai không đi du lịch chỉ mới như đọc duy nhất một trang đầu.',
+    'quote_des' => 'Thế giới như một cuốn sách, bất kỳ ai không đi du lịch chỉ mới như đọc duy nhất một trang đầu.',
     'customer_support' => 'Hỗ Trợ Khách Hàng',
     'hotline' => 'Sđt',
     'address' => 'Địa chỉ',
@@ -72,8 +73,14 @@ return [
     'best_places' => 'Điểm đến tuyệt vời',
     'affordable' => 'Giá cả hợp lý',
     'feedback1' => 'Qua chuyến du lịch này, gia đình chúng tôi rất vui vẻ, phấn khởi, khám phá được nhiều mới lạ.',
-    'feedback2' => 'Chúng tôi rất cảm kích trước sự nhiệt tình, chu đáo của các Hướng dẫn viên trong suốt hành trình, tạo không khí vui tươi thoải mái cho du khách và giúp cho chúng tôi có những bữa ăn ngon miệng hơn.',
+    'feedback2' => 'Chúng tôi rất cảm kích trước sự nhiệt tình, chu đáo của các 
+                    Hướng dẫn viên trong suốt hành trình, tạo không khí vui tươi thoải mái cho du khách và giúp 
+                    cho chúng tôi có những bữa ăn ngon miệng hơn.',
     'feedback3' => 'Chuyến đi của chúng tôi rất thú vị, được thưởng noạn phong cảnh đẹp.',
     'contact_info' => 'Thông Tin Liên Hệ',
     'send_msg' => 'Gửi Đi',
+    'not_found_tour' => 'Không Tìm Thấy Tour',
+    'leave_reply' => 'Gửi Phản Hồi',
+    'write_cmt' => 'Viết Nội Dung',
+    'aboard' => 'Tour Nước Ngoài',
 ];
