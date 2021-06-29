@@ -20,6 +20,7 @@ mix.styles('resources/assets/css/icomoon.css', 'public/assets/css/icomoon.css');
 mix.styles('resources/assets/css/responsive.css', 'public/assets/css/responsive.css');
 mix.styles('resources/assets/css/cs-select.css', 'public/assets/css/cs-select.css');
 mix.styles('resources/assets/css/cs-skin-border.css', 'public/assets/css/cs-skin-border.css');
+mix.styles('resources/assets/css/responsive.css', 'public/assets/css/responsive.css');
 mix.styles('resources/assets/css/style.css', 'public/assets/css/style.css');
 mix.styles('resources/assets/css/style2.css', 'public/assets/css/style2.css');
 mix.styles('resources/assets/css/owl.carousel.min.css', 'public/assets/css/owl.carousel.min.css');
