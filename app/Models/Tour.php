@@ -9,12 +9,15 @@ class Tour extends Model
 {
     use HasFactory;
 
+    protected $table = 'tours';
+
     protected $fillable = [
         'name',
         'description',
         'duration',
-        'num-of-participants',
+        'num_of_participants',
         'cat_tour_id',
         'rating',
+        'price',
     ];
 }

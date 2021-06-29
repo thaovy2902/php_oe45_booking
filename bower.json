@@ -1,0 +1,25 @@
+{
+  "name": "php_oe45_booking",
+  "description": "",
+  "main": "",
+  "authors": [
+    "phatntt1999 <phatntt1999@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/phatntt1999/php_oe45_booking",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.6.0",
+    "icomoon-bower": "^0.1.2",
+    "font-awesome": "fontawesome#^5.15.3",
+    "datatables.net-dt": "^3.2.2",
+    "bootstrap-validator": "^0.11.9"
+  }
+}
