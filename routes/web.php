@@ -13,3 +13,9 @@ Route::get('/destinations', function () {
 Route::get('/tour', function () {
     return view('tour');
 })->name('tour');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
