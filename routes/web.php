@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('users/profile/{id}', [UserController::class, 'show_edit'])->name('edit_profile');
 
 Route::resource('users', UserController::class)->only([
-    'index', 'store', 'update',
+    'index', 'show', 'store', 'update',
 ]);
 Route::resource('orders', UserController::class)->only([
     'index', 'show', 'store', 'update',
@@ -65,7 +65,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::resource('admin/tours', ListTourController::class);
+//Route::resource('admin/tours', ListTourController::class);
 
 Route::get('search/', [TourController::class, 'search'])->name('search');
 

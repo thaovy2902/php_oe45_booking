@@ -155,6 +155,15 @@
                                 <li><a href="{{ route('register') }}"
                                     class="ml-4 text-sm text-gray-700 underline">{{ trans('messages.signup') }}</a></li>
                             @endif
+                            <li class="nav-item-dropdown">
+                                <a href="#" class="fh5co-sub-ddown">{{ trans('messages.language') }}
+                                    <span>&#9660;</span>
+                                </a>
+                                <ul class="fh5co-sub-menu">
+                                    <li><a href="{{route('language',['en'])}}">{{ trans('messages.english') }}</a></li>
+                                    <li><a href="{{route('language',['vi'])}}">{{ trans('messages.vietnam') }}</a></li>
+                                </ul>
+                            </li>
                         @endauth
                             </ul>
                         </nav>

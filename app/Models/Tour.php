@@ -13,7 +13,7 @@ class Tour extends Model
         'name',
         'description',
         'duration',
-        'num-of-participants',
+        'num_group',
         'cat_tour_id',
         'rating',
     ];
@@ -27,6 +27,6 @@ class Tour extends Model
     }
     public function users()
     {
-        return $this->belongsToMany(User::class, 'Booking-tour', 'id', 'id');
+        return $this->belongsToMany(User::class, 'BookingTour', 'id', 'id');
     }
 }

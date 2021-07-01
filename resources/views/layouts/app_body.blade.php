@@ -22,46 +22,26 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Styles-->
-	<link rel="stylesheet" href="{{ mix('/assets/css/style.css') }}">
-<<<<<<< HEAD
+	<link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('/assets/css/header.css') }}">
-	<link rel="stylesheet" href="{{ asset('/assets/css/user_profile.css') }}">
-	<link rel="stylesheet" href="{{ asset('/assets/css/bookingform.css') }}">
-	<link rel="stylesheet" href="{{ mix('/assets/css/style2.css') }}">
-	<link rel="stylesheet" href="{{ mix('/assets/css/superfish.css') }}">
-	<link rel="stylesheet" href="{{ mix('assets/css/bootstrap.css') }}">
-	<link rel="stylesheet" href="{{ mix('assets/css/custom-heart.css') }}">
-	<link rel="stylesheet" href="{{ asset('/bower_components/icomoon-bower/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('/bower_components/font-awesome/css/all.css') }}">
-
-
-	<!-- JavaScript-->
-	<script href="{{ asset('assets/js/total.js') }}"></script>
-	<script src="{{ mix('/assets/js/modernizr-2.6.2.min.js') }}"></script>
-	<script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
-	<script src="{{ mix('assets/js/all-js.js') }}"></script>
-	<script src="{{ mix('/assets/js/main.js') }}"></script>
-	<script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('assets/js/display_form.js') }}"></script>
-
-=======
 	<link rel="stylesheet" href="{{ asset('public/assets/css/user_profile.css') }}">
-	<link rel="stylesheet" href="{{ mix('/assets/css/style2.css') }}">
-	<link rel="stylesheet" href="{{ mix('/assets/css/superfish.css') }}">
-	<link rel="stylesheet" href="{{ mix('/assets/css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/assets/css/bookingform.css') }}">
+	<link rel="stylesheet" href="{{ asset('/assets/css/style2.css') }}">
+	<link rel="stylesheet" href="{{ asset('/assets/css/superfish.css') }}">
+	<link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/custom-heart.css') }}">
 	<link rel="stylesheet" href="bower_components/icomoon-bower/style.css"> 
 	<link rel="stylesheet" href="bower_components/Font-Awesome/css/all.css"> 
 
 
 	<!-- JavaScript-->
 
-	<script src="{{ mix('/assets/js/modernizr-2.6.2.min.js') }}"></script>
-	<script src="{{ mix('assets/js/jquery.min.js') }}"></script>
-	<script src="{{ mix('assets/js/all-js.js') }}"></script>
-	<script src="{{ mix('/assets/js/main.js') }}"></script>
-	<script src="{{ mix('assets/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('/assets/js/modernizr-2.6.2.min.js') }}"></script>
+	<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+	<script src="{{ asset('assets/js/all-js.js') }}"></script>
+	<script src="{{ asset('/assets/js/main.js') }}"></script>
+	<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 	
->>>>>>> first commit
 </head>
 <body >
 <div id="fh5co-wrapper">

@@ -30,7 +30,7 @@ class ReviewController extends Controller
     public function create()
     {
         $catReview = CategoryReview::all();
-        return view('ceateReview', [
+        return view('createReview', [
             'catReview' => $catReview,
         ]);
     }
@@ -47,13 +47,13 @@ class ReviewController extends Controller
         $review = [
             "title"  =>  $request->titleReview,
             "content" => $request->contentReview,
-            "account_id" => 2,
+            "account_id" => $accountId,
             "category_review_id" => $request->catReview,
             "count_like" => 0,
         ];
 
         $review  =  Review::create($review);
-        return redirect()->route('home')->with("success", "Post has been created");
+        return redirect()->route('home')->with("success", trans('messages.review_created'));
     }
 
     /**
@@ -86,7 +86,16 @@ class ReviewController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $review = Review::find($id);
+        if (!$review) {
+            return redirect()->route('reviews.index')->with('error', trans('messages.not_found_review'));
+        }
+        if ($review->delete()) {
+
+            return back()->with('msg', trans('messages.save_sucess'));
+        }
+
+        return back()->with('msg', trans('messages.save_fail'));
     }
 
     /**

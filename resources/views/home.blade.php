@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 @extends('layouts.app_body')
 @section('header')
-@include('header.header_guess')
+@include('header.header_user')
 <!-- end:header-top -->
 @include('header.header_search')
-=======
-@extends('layouts.app_body')	
-@section('header')
-@include('components.header_guess')
-<!-- end:header-top -->
-@include('components.header_search')
->>>>>>> first commit
 @endsection
 @section('content')
 <!-- Hot Tours -->
