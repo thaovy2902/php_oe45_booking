@@ -1,0 +1,82 @@
+@extends('layouts.app_body')	
+@section('header')
+@include('components.header_guess')
+<!-- end:header-top -->
+@include('components.header_search')
+@endsection
+@section('content')
+<!-- Blog -->
+<section class="blog_area section-padding">
+	<div class="container">
+	@if ($reviews ?? '')
+		<div class="row">
+			<div class="col-lg-8 mb-5 mb-lg-0">
+				<div class="blog_left_sidebar">
+				@foreach ($reviews ?? '' as $review)
+					<article class="blog_item">
+						<div class="blog_item_img">
+							<img class="card-img rounded-0" src="{{ asset('assets/images/destinations/h.jpg') }}" alt="">
+							<a href="#" class="blog_item_date">
+								<h3>15</h3>
+								<p>Jan</p>
+							</a>
+						</div>
+						<div class="blog_details">
+							<a class="d-inline-block" href="{{ route('reviews.show',$review->id) }}">
+								<h2>{{ $review->title }}</h2>
+							</a>
+							<p>{{ $review->content1 }}</p>
+							<ul class="blog-info-link">
+								<li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+								<li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+							</ul>
+						</div>
+					</article>
+				@endforeach
+				{{ $reviews->links() }}
+				</div>
+			</div>
+		@endif
+			<div class="col-lg-4">
+				<div class="blog_right_sidebar">
+					<aside class="single_sidebar_widget post_category_widget">
+						<h4 class="widget_title">Category</h4>
+						<ul class="list cat-list">
+							<li>
+								<a href="#" class="d-flex">
+									<p>Resaurant food (41)</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="d-flex">
+									<p>Travel news (12)</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="d-flex">
+									<p>Modern technology (10)</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="d-flex">
+									<p>Product (08)</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="d-flex">
+									<p>Inspiration (11)</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="d-flex">
+									<p>Health Care (19)</p>
+								</a>
+							</li>
+						</ul>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+@endsection
