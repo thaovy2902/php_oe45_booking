@@ -1,13 +1,6 @@
 {
-<<<<<<< HEAD
-    "/assets/css/responsive.css": "/assets/css/responsive.css",
-    "/assets/css/style.css": "/assets/css/style.css",
-    "/assets/css/style2.css": "/assets/css/style2.css",
-    "/assets/css/effects.css": "/assets/css/effects.css"
-=======
     "/js/app.js": "/js/app.js",
     "/assets/js/all-js.js": "/assets/js/all-js.js",
-    "/assets/js/jquery.min.js": "/assets/js/jquery.min.js",
     "/assets/js/main.js": "/assets/js/main.js",
     "/assets/js/modernizr-2.6.2.min.js": "/assets/js/modernizr-2.6.2.min.js",
     "/assets/js/bootstrap.min.js": "/assets/js/bootstrap.min.js",
@@ -16,5 +9,4 @@
     "/assets/css/style2.css": "/assets/css/style2.css",
     "/assets/css/superfish.css": "/assets/css/superfish.css",
     "/assets/css/bootstrap.css": "/assets/css/bootstrap.css"
->>>>>>> first commit
 }

@@ -1,5 +1,6 @@
 /*** ESSENTIAL STYLES ***/
 .sf-menu, .sf-menu * {
+background-color: white;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -52,17 +53,25 @@
 	zoom: 1; /* IE7 */
 }
 .sf-menu a {
-	color: #13a;
+	color: #F78536;
+font-weight: bold;
 }
 .sf-menu li {
+	background: #BDD2FF;
 	white-space: nowrap; /* no need for Supersubs plugin */
 	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 	-webkit-transition: background .2s;
 	transition: background .2s;
 }
+.sf-menu ul li {
+	background: #fff;
+}
+.sf-menu ul ul li {
+	background: #fff;
+}
 .sf-menu li:hover,
 .sf-menu li.sfHover {
-	background: #CFDEFF;
+	background: #141a24;
 	/* only transition out, not in */
 	-webkit-transition: none;
 	transition: none;

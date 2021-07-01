@@ -2,10 +2,7 @@
 
 namespace App\Providers;
 
-<<<<<<< HEAD
-=======
 use Illuminate\Pagination\Paginator;
->>>>>>> first commit
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,10 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-<<<<<<< HEAD
-        //
-=======
         Paginator::useBootstrap();
->>>>>>> first commit
     }
 }

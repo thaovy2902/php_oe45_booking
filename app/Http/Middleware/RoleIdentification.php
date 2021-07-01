@@ -18,8 +18,6 @@ class RoleIdentification
     public function handle(Request $request, Closure $next)
     {
         if (Auth::check() && !(Auth::user()->role == 'user')) {
-            //flash for save data temporarily
-            //$request->session()->flash('successMessage', 'Access successful.');
             return $next($request);
         } else {
             return redirect(route('login'))->with('failMessage', 'Please login first!!!');

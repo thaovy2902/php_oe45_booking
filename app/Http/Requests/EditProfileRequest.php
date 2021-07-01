@@ -13,7 +13,7 @@ class EditProfileRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,23 @@ class EditProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'password' => 'required|min:8|confirmed',
+            'avatar' => 'nullable|image',
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'name.required' => trans('messages.err_empty'),
+            'name.max' => trans('messages.err_max'),
+            'email.required' => trans('messages.err_empty'),
+            'email.email' => trans('messages.err_email'),
+            'password.required' => trans('messages.err_empty'),
+            'password.min' => trans('messages.err_min'),
+            'password.confirmed' => trans('messages.err_confirm'),
+            'avatar.image' => trans('messages.err_img'),
         ];
     }
 }

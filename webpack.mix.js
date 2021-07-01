@@ -16,9 +16,9 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
     require('tailwindcss'),
     require('autoprefixer'),
 ])
-    .autoload({
-        jquery: ['$', 'window.jQuery', 'jQuery'],
-    });
+// .autoload({
+//     jquery: ['$', 'window.jQuery', 'jQuery'],
+// });
 mix.styles('resources/assets/css/style.css', 'public/assets/css/style.css');
 mix.styles('resources/assets/css/style2.css', 'public/assets/css/style2.css');
 mix.styles('resources/assets/css/superfish.css', 'public/assets/css/superfish.css');
@@ -27,11 +27,9 @@ mix.styles('resources/assets/css/bootstrap.css', 'public/assets/css/bootstrap.cs
 mix.js([
     'resources/assets/js/superfish.js',
     'resources/assets/js/hoverIntent.js',
-    'resources/assets/js/jquery.easing.1.3.js',
     'resources/assets/js/jquery.stellar.min.js',
     'resources/assets/js/jquery.waypoints.min.js',
 ], 'public/assets/js/all-js.js');
-mix.js('resources/assets/js/jquery.min.js', 'public/assets/js/jquery.min.js');
 mix.js('resources/assets/js/main.js', 'public/assets/js/main.js');
 mix.js('resources/assets/js/modernizr-2.6.2.min.js', 'public/assets/js/modernizr-2.6.2.min.js');
 mix.js('resources/assets/js/bootstrap.min.js', 'public/assets/js/bootstrap.min.js');

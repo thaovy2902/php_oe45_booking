@@ -2,37 +2,23 @@
 
 namespace App\Models;
 
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-=======
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
->>>>>>> first commit
 
 class Tour extends Model
 {
     use HasFactory;
 
-<<<<<<< HEAD
     protected $table = 'tours';
 
-=======
->>>>>>> first commit
     protected $fillable = [
         'name',
         'description',
         'duration',
-<<<<<<< HEAD
         'num_of_participants',
         'cat_tour_id',
         'rating',
         'price',
-    ];
-=======
-        'num-of-participants',
-        'cat_tour_id',
-        'rating',
     ];
 
     public function images()
@@ -43,5 +29,8 @@ class Tour extends Model
     {
         return $this->belongsTo(Category_tour::class, 'id', 'id');
     }
->>>>>>> first commit
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'Booking-tour', 'id', 'id');
+    }
 }

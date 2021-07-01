@@ -2,15 +2,20 @@
 
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ListTourController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('language/{language}', [LanguageController::class, 'index'])->name('language');
 Route::get('/', function () {
-    return view('home');
+    return view('booking');
 })->name('home');
-
+Route::get('users/profile/{id}', [UserController::class, 'show_edit'])->name('edit_profile');
 Route::resource('users', UserController::class)->only([
-    'show', 'store', 'edit',
+    'show', 'store', 'update',
+]);
+Route::resource('orders', UserController::class)->only([
+    'show',
 ]);
 
 Route::resource('tours', TourController::class)->only([

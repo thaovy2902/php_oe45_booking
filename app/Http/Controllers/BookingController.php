@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Review;
 use Illuminate\Http\Request;
 
-class ReviewController extends Controller
+class BookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews = Review::oldest()->paginate(config('app.default_paginate_review'));
-
-        return view('blog', compact('reviews'));
+        //
     }
 
     /**
@@ -48,13 +45,7 @@ class ReviewController extends Controller
      */
     public function show($id)
     {
-        $review = Review::find($id);
-        if (!$review) {
-            return redirect()->route('reviews.index')->with('error', trans('messages.not_found_review'));
-        }
-        $images = $review->images->all();
-
-        return view('single-blog', compact('review', 'images'));
+        //
     }
 
     /**

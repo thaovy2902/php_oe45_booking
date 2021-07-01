@@ -18,4 +18,12 @@ class Review extends Model
         'account-id',
         'category_review_id',
     ];
+    public function images()
+    {
+        return $this->hasMany(Image::class, 'object-id', 'id');
+    }
+    public function category_review()
+    {
+        return $this->belongsTo(Category_review::class, 'id', 'id');
+    }
 }

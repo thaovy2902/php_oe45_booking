@@ -40,11 +40,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-<<<<<<< HEAD
-=======
     public function images()
     {
         return $this->hasMany(Image::class, 'object-id', 'id');
     }
->>>>>>> first commit
+    public function tours()
+    {
+        return $this->belongsToMany(Tours::class, 'Booking-tour', 'id', 'id');
+    }
 }
