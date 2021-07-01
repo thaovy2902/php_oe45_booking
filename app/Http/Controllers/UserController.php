@@ -48,7 +48,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::find(100);
+        $user = User::find(99);
         if (!$user) {
             return redirect()->route('tours.index')->with('error', trans('messages.not_found_tour'));
         }

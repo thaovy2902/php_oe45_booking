@@ -39,11 +39,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'debug' => (bool) env('APP_DEBUG', true),
-=======
-    'debug' => (bool) env('APP_DEBUG', false),
->>>>>>> first commit
 
     /*
     |--------------------------------------------------------------------------

@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tour;
 use Illuminate\Http\Request;
 
-class TourController extends Controller
+class BookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class TourController extends Controller
      */
     public function index()
     {
-        $tours = Tour::with('images')->oldest()->paginate(config('app.default_paginate_tour'));
-
-        return view('destinations', compact('tours'));
+        //
     }
 
     /**
@@ -39,26 +36,6 @@ class TourController extends Controller
     {
         //
     }
-    public function search(Request $request)
-    {
-        $category = $request->input('category');
-        $destination = $request->input('destination');
-        $duration = $request->input('duration');
-        $min_price = $request->input('min_price');
-        $max_price = $request->input('max_price');
-        $tours = Tour::with('images')->where('name', 'LIKE', '%' . $destination . '%')
-            ->where('category', '=', "$category")
-            ->whereBetween("price", [$min_price, $max_price])
-            ->get()->paginate(config('app.default_paginate_tour'));
-        foreach ($tours as $tour) {
-            $images = $tour->images->first();
-            if (!$images) {
-                $arr[] = 'assets/images/destinations/NotFound.png';
-            } else $arr[] = $images->url;
-        }
-
-        return view('destinations', compact('tours', 'arr'));
-    }
 
     /**
      * Display the specified resource.
@@ -68,13 +45,7 @@ class TourController extends Controller
      */
     public function show($id)
     {
-        $tour = Tour::find($id);
-        if (!$tour) {
-            return redirect()->route('tours.index')->with('error', trans('messages.not_found_tour'));
-        }
-        $images = $tour->images->all();
-
-        return view('tour', compact('tour', 'images'));
+        //
     }
 
     /**
