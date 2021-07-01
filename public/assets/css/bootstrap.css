@@ -1415,7 +1415,10 @@ a {
 }
 a:hover, a:focus {
   color: #23527c;
+<<<<<<< HEAD
   text-decoration: underline;
+=======
+>>>>>>> first commit
 }
 a:focus {
   outline: thin dotted;
@@ -4099,7 +4102,22 @@ tbody.collapse.in {
 }
 
 .open > .dropdown-menu {
+<<<<<<< HEAD
   display: block;
+=======
+  width: 200px;
+  display: block;
+  padding: 10px 7px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+>>>>>>> first commit
 }
 .open > a {
   outline: 0;
@@ -6809,7 +6827,11 @@ button.close {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
+<<<<<<< HEAD
   height: auto;
+=======
+  height: 450px;
+>>>>>>> first commit
   line-height: 1;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {

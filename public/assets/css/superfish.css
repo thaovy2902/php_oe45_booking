@@ -1,6 +1,9 @@
 /*** ESSENTIAL STYLES ***/
 .sf-menu, .sf-menu * {
+<<<<<<< HEAD
 background-color: white;
+=======
+>>>>>>> first commit
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -53,16 +56,23 @@ background-color: white;
 	zoom: 1; /* IE7 */
 }
 .sf-menu a {
+<<<<<<< HEAD
 	color: #F78536;
 font-weight: bold;
 }
 .sf-menu li {
 	background: #BDD2FF;
+=======
+	color: #13a;
+}
+.sf-menu li {
+>>>>>>> first commit
 	white-space: nowrap; /* no need for Supersubs plugin */
 	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 	-webkit-transition: background .2s;
 	transition: background .2s;
 }
+<<<<<<< HEAD
 .sf-menu ul li {
 	background: #fff;
 }
@@ -72,6 +82,11 @@ font-weight: bold;
 .sf-menu li:hover,
 .sf-menu li.sfHover {
 	background: #141a24;
+=======
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+	background: #CFDEFF;
+>>>>>>> first commit
 	/* only transition out, not in */
 	-webkit-transition: none;
 	transition: none;

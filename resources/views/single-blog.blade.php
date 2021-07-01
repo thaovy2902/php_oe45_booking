@@ -1,4 +1,4 @@
-@extends('layouts.app_body')	
+@extends('layouts.app_body')
 @section('header')
 @include('components.header_guess')
 <!-- end:header-top -->
@@ -68,7 +68,7 @@
                             <p class="like-info">
                                 <a href="">
                                     <i class="icon-heart-outlined"></i>
-                                </a> 
+                                </a>
                                 Lily and 4 people like this
                             </p>
                         </div>

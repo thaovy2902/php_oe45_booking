@@ -273,7 +273,11 @@
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 							<p><a href="#">{{ trans('messages.learn_more') }}</a></p>
 						</div>
+<<<<<<< HEAD
 					</div>
+=======
+					</div>
+>>>>>>> first commit
 				</div>
 			</div>
 			<div class="clearfix visible-md-block"></div>

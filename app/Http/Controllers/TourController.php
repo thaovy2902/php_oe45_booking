@@ -15,8 +15,14 @@ class TourController extends Controller
     public function index()
     {
         $tours = Tour::with('images')->oldest()->paginate(config('app.default_paginate_tour'));
+        foreach ($tours as $tour) {
+            $images = $tour->images->first();
+            if (!$images) {
+                $arr[] = 'assets/images/destinations/NotFound.png';
+            } else $arr[] = $images->url;
+        }
 
-        return view('destinations', compact('tours'));
+        return view('destinations', compact('tours', 'arr'));
     }
 
     /**
@@ -73,6 +79,10 @@ class TourController extends Controller
             return redirect()->route('tours.index')->with('error', trans('messages.not_found_tour'));
         }
         $images = $tour->images->all();
+        if (!$images) {
+            $img_fail = '/assets/images/destinations/NotFound.png';
+            return view('tour', compact('tour', 'img_fail'));
+        }
 
         return view('tour', compact('tour', 'images'));
     }

@@ -13,7 +13,10 @@ return [
     'category' => 'Category',
     'when' => 'When',
     'duration' => 'Duration',
+<<<<<<< HEAD
     'price' => 'Price',
+=======
+>>>>>>> first commit
     'min_price' => 'Min Price',
     'max_price' => 'Max Price',
     'search' => 'Search',

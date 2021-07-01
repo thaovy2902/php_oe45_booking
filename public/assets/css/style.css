@@ -470,6 +470,26 @@ figure {
   -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
+<<<<<<< HEAD
+=======
+#fh5co-primary-menu .fh5co-sub-menu-left{
+  padding: 10px 7px 10px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  right: 0;
+}
+#fh5co-primary-menu .fh5co-sub-menu-left:hover{
+  background-color: #fff;
+}
+>>>>>>> first commit
 #fh5co-primary-menu .fh5co-sub-menu > li > .fh5co-sub-menu {
   left: 100%;
 }
@@ -642,6 +662,15 @@ figure {
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
+=======
+select.cs-select{
+  color: #F78536;
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+}
+>>>>>>> first commit
 div.cs-select span {
   padding: 10px 10px;
 }
@@ -760,6 +789,11 @@ div.cs-select span {
   transition: 0.5s;
 }
 .fh5co-tours > div img {
+<<<<<<< HEAD
+=======
+  width: 33,33%;
+  height: 300px;
+>>>>>>> first commit
   position: relative;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -1526,6 +1560,10 @@ div.cs-select span {
   margin-bottom: 60px;
 }
 .fh5co-blog a img {
+<<<<<<< HEAD
+=======
+  height: 450px;
+>>>>>>> first commit
   width: 100%;
 }
 @media screen and (max-width: 768px) {
@@ -1534,6 +1572,10 @@ div.cs-select span {
   }
 }
 .fh5co-blog .blog-text {
+<<<<<<< HEAD
+=======
+  height: 400px;
+>>>>>>> first commit
   margin-bottom: 30px;
   position: relative;
   background: #fff;
@@ -2091,9 +2133,19 @@ div.cs-select span {
   margin: 0 0 0 4px;
   cursor: pointer;
 }
+<<<<<<< HEAD
 
 .mySlides {
   display: none;
+=======
+.fh5co-sub-menu .fh5co-sub-menu2{
+  background-color: #fff;
+  margin-top: -2%;
+  margin-left: 4.2%;
+  padding: 10px 7px 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+>>>>>>> first commit
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -2271,6 +2323,347 @@ div.col-lg-9.posts-list div.single-post div.p-heading div.main-review span.r-bas
   font-size: 18px;
 }
 
+<<<<<<< HEAD
+=======
+.carousel-arrow-left, .carousel-arrow-right {
+  padding: 200px 0;
+  font-size: 50px;
+  color: white;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.carousel-arrow-left{
+  margin-left: -70px;
+}
+.carousel-arrow-right{
+  margin-right: -70px;
+}
+.menu-user{
+  font-size: 16px;
+
+}
+a.dropdown-item{
+  padding: 0 15px;
+  font-size: 18px;
+  line-height: 34px;
+  font-size: 16px;
+  padding: 0.2em 1em ;
+  letter-spacing: 1px;
+}
+.profile-info-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.friend-list,
+.img-grid-list {
+  margin: -1px;
+  list-style-type: none;
+}
+.profile-info-list > li.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #8a8a8f;
+  padding: 0 0 0.3125rem;
+}
+.profile-info-list > li + li.title {
+  padding-top: 1.5625rem;
+}
+.profile-info-list > li {
+  padding: 0.625rem 0;
+}
+.profile-info-list > li .field {
+  font-weight: 700;
+}
+.profile-info-list > li .value {
+  color: #666;
+}
+.profile-info-list > li.img-list a {
+  display: inline-block;
+}
+.profile-info-list > li.img-list a img {
+  max-width: 2.25rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+}
+.coming-soon-cover img,
+.email-detail-attachment .email-attachment .document-file img,
+.email-sender-img img,
+.friend-list .friend-img img,
+.profile-header-img img {
+  height: 150px;
+  width: 150px;
+  max-width: 100%;
+}
+.table.table-profile th {
+  border: none;
+  color: #000;
+  padding-bottom: 0.3125rem;
+  padding-top: 0;
+}
+.table.table-profile td {
+  border-color: #c8c7cc;
+}
+.table.table-profile tbody + thead > tr > th {
+  padding-top: 1.5625rem;
+}
+.table.table-profile .field {
+  color: #666;
+  font-weight: 600;
+  width: 25%;
+  text-align: right;
+}
+.table.table-profile .value {
+  font-weight: 500;
+}
+.profile-header {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.profile-header .profile-header-cover {
+  background: url('') center no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.profile-header .profile-header-cover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.85) 100%);
+}
+.profile-header .profile-header-content,
+.profile-header .profile-header-tab,
+.profile-header-img,
+body .fc-icon {
+  position: relative;
+}
+.profile-header .profile-header-tab {
+  background: #fff;
+  list-style-type: none;
+  margin: -1.25rem 0 0;
+  padding: 0 0 0 8.75rem;
+  border-bottom: 1px solid #c8c7cc;
+  white-space: nowrap;
+  height: 100%;
+}
+.profile-header .profile-header-tab > li {
+  display: inline-block;
+  margin: 0;
+}
+.profile-header .profile-header-tab > li > a {
+  display: block;
+  color: #000;
+  line-height: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+}
+.profile-header .profile-header-tab > li.active > a,
+.profile-header .profile-header-tab > li > a.active {
+  color: #007aff;
+}
+.profile-header .profile-header-content:after,
+.profile-header .profile-header-content:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.profile-header .profile-header-content {
+  color: #fff;
+  padding: 1.25rem;
+  height: 90%;
+}
+body .fc th a,
+body .fc-ltr .fc-basic-view .fc-day-top .fc-day-number,
+body .fc-widget-header a {
+  color: #000;
+}
+.profile-header-img {
+  float: left;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  z-index: 10;
+  margin: 250px 1.25rem 0 0;
+  padding: 0.1875rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: #fff;
+}
+.profile-header-info{
+  margin: 280px 1.25rem 0 0;
+}
+.profile-header-info h4 {
+  font-weight: 500;
+  margin-bottom: 0.3125rem;
+}
+.profile-container, .profile-container-edit {
+  padding: 1.5625rem;
+}
+.profile-container-edit{
+  height: 700px;
+}
+
+@media (max-width: 967px) {
+  .profile-header-img {
+      width: 5.625rem;
+      height: 5.625rem;
+      margin: 0;
+  }
+  .profile-header-info {
+      margin-left: 6.5625rem;
+      padding-bottom: 0.9375rem;
+  }
+  .profile-header .profile-header-tab {
+      padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .profile-header .profile-header-cover {
+      background-position: top;
+  }
+  .profile-header-img {
+      width: 3.75rem;
+      height: 3.75rem;
+      margin: 0;
+  }
+  .profile-header-info {
+      margin-left: 4.6875rem;
+      padding-bottom: 0.9375rem;
+  }
+  .profile-header-info h4 {
+      margin: 0 0 0.3125rem;
+  }
+  .profile-header .profile-header-tab {
+      white-space: nowrap;
+      overflow: scroll;
+      padding: 0;
+  }
+  .profile-container, .profile-container-edit {
+      padding: 0.9375rem 0.9375rem 3.6875rem;
+  }
+  .friend-list > li {
+      float: none;
+      width: auto;
+  }
+}
+.profile-info-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.friend-list,
+.img-grid-list {
+  margin: -1px;
+  list-style-type: none;
+}
+.profile-info-list > li + li.title {
+  padding-top: 1.5625rem;
+}
+.profile-info-list > li {
+  padding: 0.625rem 0;
+}
+.profile-info-list > li .field {
+  font-weight: 700;
+}
+.profile-info-list > li .value {
+  color: #666;
+}
+.profile-info-list > li.img-list a {
+  display: inline-block;
+}
+.profile-info-list > li.img-list a img {
+  max-width: 2.25rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+}
+.coming-soon-cover img,
+.email-detail-attachment .email-attachment .document-file img,
+.email-sender-img img,
+.friend-list .friend-img img,
+.profile-header-img img {
+  max-width: 100%;
+}
+.table.table-profile th {
+  border: none;
+  color: #000;
+  padding-bottom: 0.3125rem;
+  padding-top: 0;
+}
+.table.table-profile td {
+  border-color: #c8c7cc;
+}
+.table.table-profile tbody + thead > tr > th {
+  padding-top: 1.5625rem;
+}
+.table.table-profile .field {
+  color: #666;
+  font-weight: 600;
+  width: 25%;
+  text-align: right;
+}
+.table.table-profile .value {
+  font-weight: 500;
+}
+
+.friend-list {
+  padding: 0;
+}
+.friend-list > li {
+  float: left;
+  width: 50%;
+}
+.friend-list > li > a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 0.625rem;
+  margin: 1px;
+  background: #fff;
+}
+.friend-list > li > a:after,
+.friend-list > li > a:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.friend-list .friend-img {
+  float: left;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  background: #efeff4;
+}
+.friend-list .friend-info {
+  margin-left: 3.625rem;
+}
+.friend-list .friend-info h4 {
+  margin: 0.3125rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.friend-list .friend-info p {
+  color: #666;
+  margin: 0;
+}
+
+>>>>>>> first commit
 @media only screen and (max-width: 600px) {
   .card {
       margin: auto;

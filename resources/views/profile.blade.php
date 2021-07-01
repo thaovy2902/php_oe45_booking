@@ -1,4 +1,4 @@
-@extends('layouts.app_body')	
+@extends('layouts.app_body')
 @section('header')
 @include('components.header_user')
 <!-- end:header-top -->

@@ -2,7 +2,10 @@
 
 namespace Database\Seeders;
 
+<<<<<<< HEAD
 use App\Models\Tour;
+=======
+>>>>>>> first commit
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
