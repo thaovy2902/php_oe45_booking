@@ -9,10 +9,14 @@ use App\Http\Controllers\UserController;
 Route::get('language/{language}', [LanguageController::class, 'index'])->name('language');
 Route::get('search/', [TourController::class, 'search'])->name('search');
 Route::get('/', function () {
-    return view('home');
+    return view('booking');
 })->name('home');
+Route::get('users/profile/{id}', [UserController::class, 'show_edit'])->name('edit_profile');
 Route::resource('users', UserController::class)->only([
-    'show', 'store', 'edit',
+    'show', 'store', 'update',
+]);
+Route::resource('orders', UserController::class)->only([
+    'show',
 ]);
 Route::get('/dashboard', function () {
     return view('dashboard');

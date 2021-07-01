@@ -23,7 +23,9 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Styles-->
 	<link rel="stylesheet" href="{{ mix('/assets/css/style.css') }}">
+	<link rel="stylesheet" href="{{ url('/assets/css/header.css') }}">
 	<link rel="stylesheet" href="{{ asset('public/assets/css/user_profile.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/assets/css/bookingform.css') }}">
 	<link rel="stylesheet" href="{{ mix('/assets/css/style2.css') }}">
 	<link rel="stylesheet" href="{{ mix('/assets/css/superfish.css') }}">
 	<link rel="stylesheet" href="{{ mix('/assets/css/bootstrap.css') }}">

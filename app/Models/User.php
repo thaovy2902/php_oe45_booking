@@ -44,4 +44,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Image::class, 'object-id', 'id');
     }
+    public function tours()
+    {
+        return $this->belongsToMany(Tours::class, 'Booking-tour', 'id', 'id');
+    }
 }

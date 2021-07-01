@@ -22,4 +22,8 @@ class Image extends Model
     {
         return $this->belongsTo(User::class, 'object-id', 'id');
     }
+    public function review()
+    {
+        return $this->belongsTo(Review::class, 'object-id', 'id');
+    }
 }
