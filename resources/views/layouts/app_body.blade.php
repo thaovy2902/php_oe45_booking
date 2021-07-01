@@ -23,6 +23,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Styles-->
 	<link rel="stylesheet" href="{{ mix('/assets/css/style.css') }}">
+<<<<<<< HEAD
 	<link rel="stylesheet" href="{{ asset('/assets/css/header.css') }}">
 	<link rel="stylesheet" href="{{ asset('/assets/css/user_profile.css') }}">
 	<link rel="stylesheet" href="{{ asset('/assets/css/bookingform.css') }}">
@@ -43,6 +44,24 @@
 	<script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('assets/js/display_form.js') }}"></script>
 
+=======
+	<link rel="stylesheet" href="{{ asset('public/assets/css/user_profile.css') }}">
+	<link rel="stylesheet" href="{{ mix('/assets/css/style2.css') }}">
+	<link rel="stylesheet" href="{{ mix('/assets/css/superfish.css') }}">
+	<link rel="stylesheet" href="{{ mix('/assets/css/bootstrap.css') }}">
+	<link rel="stylesheet" href="bower_components/icomoon-bower/style.css"> 
+	<link rel="stylesheet" href="bower_components/Font-Awesome/css/all.css"> 
+
+
+	<!-- JavaScript-->
+
+	<script src="{{ mix('/assets/js/modernizr-2.6.2.min.js') }}"></script>
+	<script src="{{ mix('assets/js/jquery.min.js') }}"></script>
+	<script src="{{ mix('assets/js/all-js.js') }}"></script>
+	<script src="{{ mix('/assets/js/main.js') }}"></script>
+	<script src="{{ mix('assets/js/bootstrap.min.js') }}"></script>
+	
+>>>>>>> first commit
 </head>
 <body >
 <div id="fh5co-wrapper">
