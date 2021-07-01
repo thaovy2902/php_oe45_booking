@@ -17,10 +17,10 @@ class CreateCommentsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('content');
-            $table->string('object-type');
-            $table->string('object-id');
-            $table->string('account-id');
-            $table->string('comment-parent-id');
+            $table->string('object_type');
+            $table->integer('object_id');
+            $table->integer('account_id');
+            $table->integer('comment_parent_id')->nullable();
         });
     }
 

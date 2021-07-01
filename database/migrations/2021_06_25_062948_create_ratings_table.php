@@ -17,9 +17,9 @@ class CreateRatingsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('rating');
-            $table->boolean('status-rating');
-            $table->string('tour-id');
-            $table->string('account-id');
+            $table->boolean('status_rating')->default(false);
+            $table->integer('tour_id');
+            $table->integer('account_id');
         });
     }
 
