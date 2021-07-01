@@ -41,7 +41,7 @@ return [
     'promotion' => 'Super Promotion',
     'summer' => 'Summer Experience',
     'tour_spot' => 'Tourist Spots',
-    'quote_des' =>'The world is a book, and those who do not travel read only one page.',
+    'quote_des' => 'The world is a book, and those who do not travel read only one page.',
     'customer_support' => 'Customer Support',
     'hotline' => 'Hotline',
     'address' => 'Address',
@@ -76,4 +76,9 @@ return [
     'feedback3' => 'We will recommend Amerika Venture to our friends in the UK. Many thanks for a good trip.',
     'contact_info' => 'Contact Information',
     'send_msg' => 'Send Message',
+    'not_found_tour' => 'Not Found Tour',
+    'leave_reply' => 'Leave Reply',
+    'write_cmt' => 'Write Comment',
+    'aboard' => 'Aboard Tour',
+    'category_blog' => 'Category',
 ];

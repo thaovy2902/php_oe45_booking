@@ -39,7 +39,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'debug' => (bool) env('APP_DEBUG', true),
+=======
+    'debug' => (bool) env('APP_DEBUG', false),
+>>>>>>> first commit
 
     /*
     |--------------------------------------------------------------------------
@@ -229,5 +233,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+<<<<<<< HEAD
+=======
+    'default_paginate_tour' => '9',
+    'default_paginate_review' => '4'
+>>>>>>> first commit
 
 ];

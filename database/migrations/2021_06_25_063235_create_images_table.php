@@ -17,8 +17,13 @@ class CreateImagesTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('url');
+<<<<<<< HEAD
             $table->string('object_type');
             $table->integer('object_id');
+=======
+            $table->string('object-type');
+            $table->integer('object-id');
+>>>>>>> first commit
         });
     }
 

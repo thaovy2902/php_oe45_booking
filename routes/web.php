@@ -9,13 +9,16 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/destinations', function () {
-    return view('destinations');
-})->name('destinations');
+Route::resource('users', UserController::class)->only([
+    'show', 'store', 'edit',
+]);
 
-Route::get('/tour', function () {
-    return view('welcome');
-})->name('tour');
+Route::resource('tours', TourController::class)->only([
+    'index', 'show',
+]);
+Route::resource('reviews', ReviewController::class)->only([
+    'index', 'show',
+]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -24,3 +27,5 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 Route::resource('admin/tours', ListTourController::class);
+
+Route::get('search/', [TourController::class, 'search'])->name('search');

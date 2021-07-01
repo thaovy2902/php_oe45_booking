@@ -14,4 +14,15 @@ class Image extends Model
         'object-type',
         'object-id',
     ];
+<<<<<<< HEAD
+=======
+    public function tour()
+    {
+        return $this->belongsTo(Tour::class, 'object-id', 'id');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'object-id', 'id');
+    }
+>>>>>>> first commit
 }

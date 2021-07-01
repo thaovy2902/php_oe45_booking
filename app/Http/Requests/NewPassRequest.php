@@ -14,7 +14,11 @@ class NewPassRequest extends FormRequest
      */
     public function authorize()
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> first commit
     }
 
     /**

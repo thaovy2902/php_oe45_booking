@@ -41,7 +41,7 @@ return [
     'promotion' => 'Siêu khuyến mãi',
     'summer' => 'Trải Nghiệm Mùa Hè',
     'tour_spot' => 'Điểm Du Lịch',
-    'quote_des' =>'Thế giới như một cuốn sách, bất kỳ ai không đi du lịch chỉ mới như đọc duy nhất một trang đầu.',
+    'quote_des' => 'Thế giới như một cuốn sách, bất kỳ ai không đi du lịch chỉ mới như đọc duy nhất một trang đầu.',
     'customer_support' => 'Hỗ Trợ Khách Hàng',
     'hotline' => 'Sđt',
     'address' => 'Địa chỉ',
@@ -76,4 +76,9 @@ return [
     'feedback3' => 'Chuyến đi của chúng tôi rất thú vị, được thưởng noạn phong cảnh đẹp.',
     'contact_info' => 'Thông Tin Liên Hệ',
     'send_msg' => 'Gửi Đi',
+    'not_found_tour' => 'Không Tìm Thấy Tour',
+    'leave_reply' => 'Gửi Phản Hồi',
+    'write_cmt' => 'Viết Nội Dung',
+    'aboard' => 'Tour Nước Ngoài',
+    'category_blog' => 'Chủ đề',
 ];
