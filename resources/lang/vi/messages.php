@@ -102,5 +102,10 @@ return [
     'welcome' => 'Xin chào',
     'manage_profile' => 'Quản Lý Thông Tin',
     'logout' => 'Thoát',
-    'err_img' => 'Loại file không phải là file ảnh.'
+    'err_img' => 'Loại file không phải là file ảnh.',
+    'booking_form' => 'Đặt Tour Du Lịch',
+    'quantity' => 'Số lượng',
+    'date_start' => 'Ngày khởi hành',
+    'total' => 'Tổng tiền',
+    'booking' => 'XÁC NHẬN'
 ];

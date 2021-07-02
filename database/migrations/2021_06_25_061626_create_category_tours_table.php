@@ -16,11 +16,7 @@ class CreateCategoryToursTable extends Migration
         Schema::create('category_tours', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-<<<<<<< HEAD
             $table->string('cat_name');
-=======
-            $table->string('cat-name');
->>>>>>> first commit
         });
     }
 

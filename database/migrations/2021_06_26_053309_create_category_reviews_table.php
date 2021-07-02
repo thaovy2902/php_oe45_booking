@@ -16,11 +16,7 @@ class CreateCategoryReviewsTable extends Migration
         Schema::create('category_reviews', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-<<<<<<< HEAD
             $table->string('name_rv_cat');
-=======
-            $table->string('name-rv-cat');
->>>>>>> first commit
         });
     }
 

@@ -1,6 +1,6 @@
-@extends('layouts.app_body')	
+@extends('layouts.app_body')
 @section('header')
-@include('components.header_guess')
+@include('header.header_guess')
 <!-- end:header-top -->
 @endsection
 @section('content')

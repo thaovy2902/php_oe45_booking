@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category_tour;
+use App\Models\CategoryTour;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $cat_tour = Category_tour::all();
+        $cat_tour = CategoryTour::all();
 
         return view('admin.listTour', [
             'tours' => $cat_tour,

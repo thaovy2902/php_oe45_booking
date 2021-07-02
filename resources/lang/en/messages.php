@@ -102,5 +102,10 @@ return [
     'welcome' => 'Welcome',
     'manage_profile' => 'Manage Profile',
     'logout' => 'Logout',
-    'err_img' => 'This is not an image.'
+    'err_img' => 'This is not an image.',
+    'booking_form' => 'Booking Form',
+    'quantity' => 'Quantity',
+    'date_start' => 'Date Start',
+    'total' => 'Total',
+    'booking' => 'Booking'
 ];

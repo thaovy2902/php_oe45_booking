@@ -24,21 +24,23 @@
 	<!-- Styles-->
 	<link rel="stylesheet" href="{{ mix('/assets/css/style.css') }}">
 	<link rel="stylesheet" href="{{ mix('/assets/css/style2.css') }}">
+	<link rel="stylesheet" href="{{ asset('/assets/css/bookingForm.css') }}">
 	<link rel="stylesheet" href="{{ asset('/assets/css/bootstrap-datepicker.min.css') }}">
 	<link rel="stylesheet" href="{{ mix('/assets/css/superfish.css') }}">
 	<link rel="stylesheet" href="{{ mix('/assets/css/bootstrap.css') }}">
-		<link rel="stylesheet" href="{{ "/bower_components/font-awesome/css/all.css" }}">
+	<link rel="stylesheet" href="{{ "/bower_components/font-awesome/css/all.css" }}">
 
 	<link rel="stylesheet" href="{{ "/bower_components/icomoon-bower/style.css" }}">
 	<link rel="stylesheet" href="{{ asset('/assets/css/effects.css') }}">
 	<link rel="stylesheet" href="{{ asset('/assets/css/cs-select.css') }}">
 	<link rel="stylesheet" href="{{ asset('/assets/css/cs-skin-border.css') }}">
+
 	<!-- JavaScript-->
+	<script src="{{ asset("bower_components/jquery/dist/jquery.min.js") }}"></script>
 	<script src="{{ mix('/assets/js/all-js.js') }}"></script>
 	<script src="{{ mix('/assets/js/main.js') }}"></script>
 	<script src="{{ mix('/assets/js/bootstrap.min.js') }}"></script>
 	<script src="{{ mix('/assets/js/modernizr-2.6.2.min.js') }}"></script>
-	<script src="{{ asset("bower_components/jquery/dist/jquery.min.js") }}"></script>
 </head>
 
 <body>

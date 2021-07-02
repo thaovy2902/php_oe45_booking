@@ -20,16 +20,10 @@ class CreateReviewsTable extends Migration
             $table->string('content1');
             $table->string('content2')->nullable();
             $table->string('content3')->nullable();
-<<<<<<< HEAD
             $table->integer('count_like')->default(0);
             $table->boolean('status-public')->default(true);
             $table->integer('account_id');
             $table->integer('category_review_id');
-=======
-            $table->boolean('status-public')->default(true);
-            $table->string('account-id');
-            $table->string('category_review_id');
->>>>>>> first commit
         });
     }
 
