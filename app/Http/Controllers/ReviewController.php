@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoryReview;
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
@@ -26,7 +28,10 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        $catReview = CategoryReview::all();
+        return view('ceateReview', [
+            'catReview' => $catReview,
+        ]);
     }
 
     /**
@@ -37,7 +42,17 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $accountId = Auth::user()->id;
+        $review = [
+            "title"  =>  $request->titleReview,
+            "content" => $request->contentReview,
+            "account_id" => 2,
+            "category_review_id" => $request->catReview,
+            "count_like" => 0,
+        ];
+
+        $review  =  Review::create($review);
+        return redirect()->route('home')->with("success", "Post has been created");
     }
 
     /**
@@ -58,29 +73,6 @@ class ReviewController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -89,5 +81,29 @@ class ReviewController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Upload images into directory
+     *
+     */
+    public function uploadImageToDir(Request $request)
+    {
+        if ($request->hasFile('upload')) {
+            $originName = $request->file('upload')->getClientOriginalName();
+            $fileName = pathinfo($originName, PATHINFO_FILENAME);
+            $extension = $request->file('upload')->getClientOriginalExtension();
+            $fileName = $fileName . '_' . time() . '.' . $extension;
+
+            $request->file('upload')->move(public_path('images'), $fileName);
+
+            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
+            $url = asset('images/' . $fileName);
+            $msg = 'Image uploaded successfully';
+            $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
+
+            @header('Content-type: text/html; charset=utf-8');
+            echo $response;
+        }
     }
 }

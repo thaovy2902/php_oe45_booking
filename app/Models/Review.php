@@ -11,11 +11,9 @@ class Review extends Model
 
     protected $fillable = [
         'title',
-        'content1',
-        'content2',
-        'content3',
-        'status-public',
-        'account-id',
+        'content',
+        'count_like',
+        'account_id',
         'category_review_id',
     ];
     public function images()

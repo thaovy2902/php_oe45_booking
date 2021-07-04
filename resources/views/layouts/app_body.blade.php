@@ -103,6 +103,15 @@
 				</div>
 			</header>
 		</div>
+		<div class="container">
+			@if (session('success'))
+				<div class="alert alert-success">
+					<i class="fa fa-thumbs-up"></i>
+					<h2>{{session('success')}}</h2>
+				</div>
+    		@endif
+		</div>
+
 		<!-- end:header-top -->
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
