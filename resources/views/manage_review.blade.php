@@ -45,7 +45,7 @@
                         <div class="media">
                             <a class="pull-left" href="#">
                                 @if (!empty($review->images->first()))
-                                    <img class="media-object" src="{{ asset($review->images->first()->url) }}">
+                                    <img class="media-objectt" src="{{ asset($review->images->first()->url) }}">
                                 @endif
                             </a>
                             <div class="media-body">

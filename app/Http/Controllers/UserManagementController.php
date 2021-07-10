@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CategoryTour;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
-class CategoryController extends Controller
+class UserManagementController extends Controller
 {
     public function __construct()
     {
@@ -19,9 +20,13 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $cat_tours = CategoryTour::all();
+        $name = Auth::user()->name;
+        $users = User::orderBy('created_at', 'asc')->get();
 
-        return view('admin.listCategory', compact('cat_tours'));
+        return view('admin.listUser', [
+            'users' => $users,
+            'name' => $name,
+        ]);
     }
 
     /**
@@ -31,7 +36,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.createCategory');
+        //
     }
 
     /**
@@ -42,16 +47,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->name;
-        $check = CategoryTour::create([
-            'cat_name' => $name,
-        ]);
-        if ($check) {
-
-            return redirect()->route('category.create')->with('msg', trans('messages.save_sucess'));
-        }
-
-        return redirect()->route('category.create')->with('msg', trans('messages.save_fail'));
+        //
     }
 
     /**
@@ -73,9 +69,11 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $cat_tour = CategoryTour::find($id);
+        $user = User::find($id);
 
-        return view('admin.editCategory', compact('cat_tour'));
+        return view('admin.editUser', [
+            'user' => $user,
+        ]);
     }
 
     /**
@@ -88,16 +86,19 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $name = $request->name;
+        $email = $request->email;
+        $role = $request->role;
 
-        $category = CategoryTour::find($id);
-        $category->cat_name = $name;
+        $user = User::find($id);
+        $user->name = $name;
+        $user->email =  $email;
+        $user->role = $role;
+        if ($user->save()) {
 
-        if ($category->save()) {
-
-            return redirect()->route('category.index')->with('msg', trans('messages.save_sucess'));
+            return redirect()->route('user.index')->with('msg', trans('messages.save_sucess'));
         }
 
-        return redirect()->route('category.index')->with('msg', trans('messages.save_fail'));
+        return redirect()->route('user.index')->with('msg', trans('messages.save_fail'));
     }
 
     /**
@@ -108,6 +109,11 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        if ($user->delete()) {
+            return redirect()->route('user.index')->with('msg', trans('messages.del_sucess'));
+        }
+
+        return redirect()->route('user.index')->with('msg', trans('messages.del_fail'));
     }
 }

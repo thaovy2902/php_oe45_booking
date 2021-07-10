@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="container-fluid">
-    <form class="well form-horizontal" action="{{ route('tours.update', ['tour' => $tour->id]) }}" method="POST" id="contact_form">
+    <form class="well form-horizontal" action="{{ route('admintours.update', $tour->id) }}" method="POST" id="contact_form">
         @csrf
         {{ method_field('PUT') }}
 
@@ -21,7 +21,7 @@
                 <div class="col-md-4 selectContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fas fa-torii-gate"></i></span>
-                        <select name="cat_tour_id" class="form-control selectpicker" value="{{ $tour->cat_tour_id }}">
+                        <select name="cat_tour_id" required class="form-control selectpicker" value="{{ $tour->cat_tour_id }}">
                             <option value="">Select tour category...</option>
                             @foreach ($cat_tour as $item)
                             <option {{ $item->id == $tour->cat_tour_id ? 'selected' : '' }}
@@ -38,7 +38,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fab fa-avianex"></i></span>
-                        <input name="name" value="{{ $tour->name }}" placeholder="Tour Name..." class="form-control"
+                        <input name="name" required value="{{ $tour->name }}" placeholder="Tour Name..." class="form-control"
                             type="text">
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pen"></i></span>
-                        <textarea class="form-control" name="description"
+                        <textarea class="form-control" required name="description"
                             placeholder="Say something about tour...">{{ $tour->description }}</textarea>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-business-time"></i></span>
-                        <input name="duration" value="{{ $tour->duration }}" placeholder="How many day is tour last?"
+                        <input name="duration" required value="{{ $tour->duration }}" placeholder="How many day is tour last?"
                             class="form-control" type="number">
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input name="numOfParticipants" value="{{ $tour->num_of_participants }}"
+                        <input name="numOfParticipants" required value="{{ $tour->num_of_participants }}"
                             placeholder="Enter number of participants..." class="form-control" type="number">
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-donate"></i></span>
-                        <input name="price" value="{{ $tour->price }}" placeholder="Enter price of tour..."
+                        <input name="price" required value="{{ $tour->price }}" placeholder="Enter price of tour..."
                             class="form-control" type="number">
                     </div>
                 </div>

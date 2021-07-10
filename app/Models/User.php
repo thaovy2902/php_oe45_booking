@@ -46,7 +46,7 @@ class User extends Authenticatable
     }
     public function tours()
     {
-        return $this->belongsToMany(Tours::class, 'BookingTour', 'id', 'id');
+        return $this->belongsToMany(Tour::class, 'booking_tours', 'account_id', 'tour_id')->withPivot('created_at', 'total_price', 'booking_start_date', 'quantity');
     }
     public function reviews()
     {

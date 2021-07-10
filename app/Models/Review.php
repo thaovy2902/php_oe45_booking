@@ -12,7 +12,7 @@ class Review extends Model
     protected $fillable = [
         'title',
         'content',
-        'status_public',
+        'count_like',
         'account_id',
         'category_review_id',
     ];

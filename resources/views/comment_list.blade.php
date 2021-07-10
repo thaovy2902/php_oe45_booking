@@ -3,7 +3,12 @@
         <div class="user justify-content-between d-flex mb-2">
             <div class="row">
                 <div class="col-md-1">
-                    <img class="avatar_reply" src="{{ asset('assets/images/uploads/avatar/blog_1.png')}}" alt="">
+                    @if (empty($comment->user->images->first()))
+                        <img class="avatar_reply" src="{{ asset('/assets/images/service/default-avatar.png') }}" alt=""> 
+                    @else
+                        <img class="avatar_reply" src="{{ asset($comment->user->images->first()->url ) }}" alt=""> 
+                    @endif
+                    
                 </div>
                 <div class="col-md-11">
                     <div >

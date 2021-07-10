@@ -117,7 +117,7 @@
                     <div class="blog-author">
                         <div class="media align-items-center">
                             @if ($user->images->first())
-                                <img class="avatar_reply" src="{{ asset("$user->images->first()->url") }}" alt="" />
+                                <img class="avatar_reply" src="{{ asset($user->images->first()->url) }}" alt="" />
                             @else
                                 <img class="avatar_reply" src="{{ asset('/assets/images/service/default-avatar.png') }}" alt="" />
                             @endif
@@ -128,7 +128,7 @@
                     </div>
                     <div class="comments-area">
                         <h4> {{ $review->comments->count() }} {{ trans('messages.comments') }}</h4>
-                        @include('comment_list', ['comments' => $review->comments->whereNull('comment-parent-id'), 'review_id' => $review->id])
+                        @include('comment_list', ['comments' => $review->comments->whereNull('comment_parent_id'), 'review_id' => $review->id])
                     </div>
                     <div class="comment-form">
                         <h4>{{ trans('messages.leave_reply') }}</h4>
@@ -139,7 +139,7 @@
                                 <div class="form-group">
                                     <textarea class="form-control w-100" name="content" id="comment" cols="30" rows="9"
                                         placeholder="{{ trans('messages.write_cmt') }}" required></textarea>
-                                    <input type=hidden name='review-id' value="{{ $review->id }}" />
+                                    <input type=hidden name='review_id' value="{{ $review->id }}" />
                                 </div>
                                 </div>
                             </div>

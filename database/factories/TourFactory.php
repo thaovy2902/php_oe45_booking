@@ -28,8 +28,8 @@ class TourFactory extends Factory
             'description' => $this->faker->paragraph(),
             'duration' => rand(2, 7),
             'num_of_participants' => random_int(20, 50),
-            'cat_tour_id' => CategoryTour::all()->random()->id,
-            'rating' => rand(1, 5),
+            'cat_tour_id' => $this->faker->numberBetween(1, 3),
+            'avgRate' => rand(1, 5),
             'price' => rand(50, 500),
         ];
     }

@@ -31,9 +31,9 @@
     <!-- Core plugin JavaScript-->
     <script src="{{ asset('/bower_components/jquery-easing/jquery.easing.min.js') }}"></script>
     <!-- Page level plugins -->
-    <script src="{{ asset('/bower_components/dataTables.bootstrap4.min.js/index.js') }}"></script>
+    <script src="{{ asset('/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js/index.js') }}"></script>
     <!-- Table Support plugins -->
-    <script src="{{ asset('/bower_components/jquery.dataTables.min/index.js') }}"></script>
+    <script src="{{ asset('/bower_components/datatables.net/js/jquery.dataTables.min/index.js') }}"></script>
 
 </head>
 
@@ -55,7 +55,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('admin.index') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -78,8 +78,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Types:</h6>
-                        <a class="collapse-item" href="buttons.html">User Information</a>
-                        <a class="collapse-item" href="cards.html">User Review</a>
+                        <a class="collapse-item" href="{{ route('user.index') }}">User Management</a>
+                        <a class="collapse-item" href="{{ route('adminreviews.index') }}">User Review</a>
                     </div>
                 </div>
             </li>
@@ -95,8 +95,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilities:</h6>
-                        <a class="collapse-item" href="#">Tour Category</a>
-                        <a class="collapse-item" href="{{ route('tours.index') }}">Tour List</a>
+                        <a class="collapse-item" href="{{ route('category.index') }}">Tour Category</a>
+                        <a class="collapse-item" href="{{ route('admintours.index') }}">Tour List</a>
                     </div>
                 </div>
             </li>
@@ -132,16 +132,16 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ route('revenue') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Booking</span></a>
+                    <span>Revenue</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="{{ route('home') }}">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>HOMEPAGE</span></a>
             </li>
 
             <!-- Divider -->
@@ -330,7 +330,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                    {{ trans('messages.hello') }} {{ $authId }}</span>
+                                    {{-- {{ trans('messages.hello') }} {{ $name }}</span> --}}
                                 <img class="img-profile rounded-circle" src="{{ asset('assets/images/blog/author.png') }}">
                             </a>
                             <!-- Dropdown - User Information -->

@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Date;
 
 class BookingTourController extends Controller
 {
-    public function showBookingTour()
+    public function showBookingTour($id)
     {
         $user = Auth::user();
-        $selectedTour = Tour::find(2);
+        $selectedTour = Tour::find($id);
         return view('booking.booking_form', [
             'user' => $user,
             'selectedTour' => $selectedTour,

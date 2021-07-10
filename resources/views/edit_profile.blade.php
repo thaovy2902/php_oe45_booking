@@ -64,13 +64,13 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">{{ trans('messages.new_pass') }}:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" value="11111122333" name="password">
+                        <input class="form-control" type="password" placeholder="New Password..." name="password">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">{{ trans('messages.confirm_pass') }}:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" value="11111122333" name="password_confirmation">
+                        <input class="form-control" type="password" placeholder="Confirm Password..." name="password_confirmation">
                     </div>
                 </div>
                 <div class="form-group">

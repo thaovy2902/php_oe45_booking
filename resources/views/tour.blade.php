@@ -74,7 +74,7 @@
                            <div class="col-xxs-12 col-xs-6 mt">
                               <div class="input-field">
                                  <label for="destination">{{ trans('messages.max_group') }}:</label>
-                                 <h1 style="font-size: 16px;">{{ $tour->num_group}} {{ trans('messages.people') }}</h1>
+                                 <h1 style="font-size: 16px;">{{ $tour->num_of_participants}} {{ trans('messages.people') }}</h1>
                               </div>
                            </div>
                            <div class="col-xxs-12 col-xs-6 mt">
@@ -91,11 +91,11 @@
                                     {{ trans('messages.from') }}
                                  </h3>
                                  <h1>
-                                    VNĐ {{ number_format($tour->price) ?? '1,000,000' }}
+                                    ${{ number_format($tour->price) }}
                                  </h1>
                               </div>
                               <div class="bookbtn">
-                                 <a href="book_tour.html" class="a-btn">
+                                 <a href="{{ route('booking', $tour->id) }}" class="a-btn">
                                     <span>{{ trans('messages.book_now') }}</span>
                                  </a>
                               </div>

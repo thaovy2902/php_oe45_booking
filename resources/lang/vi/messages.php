@@ -128,5 +128,7 @@ return [
     'reviews_0' => 'Bạn không có bài đăng nào',
     'review_create' => 'Tạo bài viết thành công.',
     'domestic_travel' => 'Du lịch trong nước',
-    'national_travel' => 'Du lịch nước ngoài'
+    'national_travel' => 'Du lịch nước ngoài',
+    'del_failed' => 'Xóa không thành công.',
+    'del_sucess' => 'Xóa thành công.',
 ];

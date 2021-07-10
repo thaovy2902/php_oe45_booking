@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CategoryTour;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
-class CategoryController extends Controller
+class AdminController extends Controller
 {
     public function __construct()
     {
@@ -19,9 +20,13 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $cat_tours = CategoryTour::all();
+        $authId = Auth::user()->id;
+        $name = Auth::user()->name;
 
-        return view('admin.listCategory', compact('cat_tours'));
+        return view('admin.dashboard', [
+            'authId' => $authId,
+            'name' => $name,
+        ]);
     }
 
     /**
@@ -31,7 +36,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.createCategory');
+        //
     }
 
     /**
@@ -42,16 +47,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->name;
-        $check = CategoryTour::create([
-            'cat_name' => $name,
-        ]);
-        if ($check) {
-
-            return redirect()->route('category.create')->with('msg', trans('messages.save_sucess'));
-        }
-
-        return redirect()->route('category.create')->with('msg', trans('messages.save_fail'));
+        //
     }
 
     /**
@@ -73,9 +69,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $cat_tour = CategoryTour::find($id);
-
-        return view('admin.editCategory', compact('cat_tour'));
+        //
     }
 
     /**
@@ -87,17 +81,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $name = $request->name;
-
-        $category = CategoryTour::find($id);
-        $category->cat_name = $name;
-
-        if ($category->save()) {
-
-            return redirect()->route('category.index')->with('msg', trans('messages.save_sucess'));
-        }
-
-        return redirect()->route('category.index')->with('msg', trans('messages.save_fail'));
+        //
     }
 
     /**

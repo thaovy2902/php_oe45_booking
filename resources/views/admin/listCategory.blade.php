@@ -25,11 +25,11 @@
     <!-- DataTales Table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">Tour List</h5>
+            <h5 class="m-0 font-weight-bold text-primary">Category List</h5>
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <a href="{{ route('admintours.create') }}" class="btn btn-primary btn-icon-split btn-sm btn-add-new">
+                <a href="{{ route('category.create') }}" class="btn btn-primary btn-icon-split btn-sm btn-add-new">
                     <span class="icon">
                         <i class="fas fa-plus-circle"></i>
                     </span>
@@ -39,47 +39,35 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Name</th>
-                            <th>Description</th>
-                            <th>Duration</th>
-                            <th>Num of Participants</th>
-                            <th>Rating</th>
-                            <th>Prices</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
+                            <th></th>
                             <th>Name</th>
-                            <th>Description</th>
-                            <th>Duration</th>
-                            <th>Num.of participants</th>
-                            <th>Rating</th>
-                            <th>Prices</th>
                             <th>Actions</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach ($tours as $tour)
+                        @foreach ($cat_tours as $cat_tour)
                         <tr>
-                            <td>{{ $tour->name }}</td>
-                            <td>{{ $tour->description }}</td>
-                            <td>{{ $tour->duration }}</td>
-                            <td>{{ $tour->num_of_participants }}</td>
-                            <td>{{ $tour->avgRate }}</td>
-                            <td>${{ $tour->price }}</td>
+                            <td>{{ $loop->index +1 }}</td>
+                            <td>{{ $cat_tour->cat_name }}</td>
                             <td class="action-crud">
-                                <a href="{{ route('admintours.edit', $tour->id) }}" class="btn btn-info btn-circle btn-edit">
+                                <a href="{{ route('category.edit', $cat_tour->id) }}" class="btn btn-info btn-circle btn-edit">
                                     <i class="fas fa-pen"></i>
                                 </a>
-                                <form action="{{ route('admintours.destroy', $tour->id) }}" method="POST">
+                                {{-- <form action="{{ route('category.destroy', $cat_tour->id) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 
                                     <button type="submit" class="btn btn-danger btn-circle">
                                         <i class="fas fa-trash"></i>
                                     </button>
-                                </form>
+                                </form> --}}
 
                             </td>
                         </tr>

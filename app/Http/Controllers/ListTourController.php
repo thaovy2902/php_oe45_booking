@@ -21,12 +21,14 @@ class ListTourController extends Controller
      */
     public function index()
     {
-        $authId = Auth::user()->name;
+        $authId = Auth::user()->id;
+        $name = Auth::user()->name;
         $tours = Tour::orderBy('created_at', 'asc')->get();
 
         return view('admin.listTour', [
             'tours' => $tours,
             'authId' => $authId,
+            'name' => $name,
         ]);
     }
 
@@ -58,17 +60,20 @@ class ListTourController extends Controller
         $numOfParticipants = $request->numOfParticipants;
         $catTourId = $request->cat_tour_id;
         $price = $request->price;
-
-        Tour::create([
+        $check = Tour::create([
             'name' => $name,
+            'price' => $price,
             'description' => $description,
             'duration' => $duration,
             'num_of_participants' => $numOfParticipants,
             'cat_tour_id' => $catTourId,
-            'price' => $price,
         ]);
+        if ($check) {
 
-        return redirect()->route('tours.index')->with('createSuccess', 'Create successfull');
+            return redirect()->route('admintours.create')->with('msg', trans('messages.save_sucess'));
+        }
+
+        return redirect()->route('admintours.create')->with('msg', trans('messages.save_fail'));
     }
 
     /**
@@ -122,9 +127,12 @@ class ListTourController extends Controller
         $tour->duration = $duration;
         $tour->cat_tour_id = $catTourId;
         $tour->price = $price;
-        $tour->save();
+        if ($tour->save()) {
 
-        return redirect()->route('tours.index')->with('Success', 'Action successfull');
+            return redirect()->route('admintours.index')->with('msg', trans('messages.save_sucess'));
+        }
+
+        return redirect()->route('admintours.index')->with('msg', trans('messages.save_fail'));
     }
 
     /**
@@ -136,10 +144,11 @@ class ListTourController extends Controller
     public function destroy($id)
     {
         // $tour = new Tour();
-        $id_tour = $id;
-        Tour::find($id_tour)->delete();
-        // $tour->find($id_tour)->delete();
+        $tour = Tour::find($id);
+        if ($tour->delete()) {
+            return redirect()->route('admintours.index')->with('msg', trans('messages.del_sucess'));
+        }
 
-        return redirect()->route('tours.index');
+        return redirect()->route('admintours.index')->with('msg', trans('messages.del_fail'));
     }
 }

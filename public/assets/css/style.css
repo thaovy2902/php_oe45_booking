@@ -3098,6 +3098,11 @@ form.reply_form:hover{
   height: 40px;
   margin-bottom: 20px;
 }
+.media-objectt{
+  display: block;
+  width: 300px;
+  height: 300px;
+}
 @media only screen and (max-width: 600px) {
   .card {
       margin: auto;

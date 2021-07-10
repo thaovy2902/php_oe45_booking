@@ -25,54 +25,42 @@
     <!-- DataTales Table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">Tour List</h5>
+            <h5 class="m-0 font-weight-bold text-primary">Review List</h5>
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <a href="{{ route('admintours.create') }}" class="btn btn-primary btn-icon-split btn-sm btn-add-new">
-                    <span class="icon">
-                        <i class="fas fa-plus-circle"></i>
-                    </span>
-                    <span class="text">Add new</span>
-                </a>
                 @include('common.checkSave')
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Duration</th>
-                            <th>Num of Participants</th>
-                            <th>Rating</th>
-                            <th>Prices</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Content</th>
+                            <th>Category</th>
+                            <th>Comments</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Duration</th>
-                            <th>Num.of participants</th>
-                            <th>Rating</th>
-                            <th>Prices</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Content</th>
+                            <th>Category</th>
+                            <th>Comments</th>
                             <th>Actions</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach ($tours as $tour)
+                        @foreach ($reviews as $review)
                         <tr>
-                            <td>{{ $tour->name }}</td>
-                            <td>{{ $tour->description }}</td>
-                            <td>{{ $tour->duration }}</td>
-                            <td>{{ $tour->num_of_participants }}</td>
-                            <td>{{ $tour->avgRate }}</td>
-                            <td>${{ $tour->price }}</td>
+                            <td>{{ $review->title }}</td>
+                            <td>{{ $review->user->name }}</td>
+                            <td>{{ $review->content }}</td>
+                            <td>{{ $review->category_review->name_rv_cat }}</td>
+                            <td>{{ $review->comments->count() }}</td>
                             <td class="action-crud">
-                                <a href="{{ route('admintours.edit', $tour->id) }}" class="btn btn-info btn-circle btn-edit">
-                                    <i class="fas fa-pen"></i>
-                                </a>
-                                <form action="{{ route('admintours.destroy', $tour->id) }}" method="POST">
+                                <form action="{{ route('adminreviews.destroy', $review->id) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 
