@@ -5,11 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category_tour extends Model
+class BookingTour extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'cat-name',
+        'total-price',
+        'booking-start-date',
+        'status',
+        'quantity',
+        'tour-id',
+        'account-id',
     ];
 }

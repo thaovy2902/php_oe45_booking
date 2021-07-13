@@ -6,6 +6,13 @@
             </a>
         </x-slot>
 
+        @if (session('failMessage'))
+            {{-- @include('common.error') --}}
+            <div class="alert alert-danger"><h2>{{session('failMessage')}}</h2></div>
+        @endif
+
+
+
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
