@@ -14,4 +14,14 @@ class LikeReview extends Model
         'account-id',
         'like-status',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'account_id', 'id');
+    }
+
+    public function review()
+    {
+        return $this->belongsTo(Review::class, 'review_id', 'id');
+    }
 }

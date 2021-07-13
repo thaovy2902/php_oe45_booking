@@ -10,6 +10,11 @@ class CategoryTour extends Model
     use HasFactory;
 
     protected $fillable = [
-        'cat-name',
+        'cat_name',
     ];
+
+    public function tours()
+    {
+        return $this->hasMany(Tour::class, 'cat_tour_id', 'id');
+    }
 }

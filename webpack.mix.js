@@ -11,32 +11,27 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
-//     require('postcss-import'),
-//     require('tailwindcss'),
-//     require('autoprefixer'),
-// ]);
-// mix.js('resources/js/app.js', 'public/js')
-//     .postCss('resources/css/app.css', 'public/css')
-//     ;
-mix.styles('resources/assets/css/responsive.css', 'public/assets/css/responsive.css');
-mix.styles('resources/assets/css/style.css', 'public/assets/css/style.css');
-mix.styles('resources/assets/css/style2.css', 'public/assets/css/style2.css');
-// mix.styles('resources/assets/css/owl.carousel.min.css', 'public/assets/css/owl.carousel.min.css');
-mix.styles([
-    'resources/assets/css/animate.css',
-    'resources/assets/css/superfish.css',
-], 'public/assets/css/effects.css');
-// mix.js([
-//     'resources/assets/js/appear-modal.js',
-//     'resources/assets/js/classie.js',
-//     'resources/assets/js/hoverIntent.js',
-//     'resources/assets/js/jquery.easing.1.3.js',
-//     'resources/assets/js/jquery.min.js',
-//     'resources/assets/js/jquery.stellar.min.js',
-//     'resources/assets/js/jquery.waypoints.min.js',
-//     'resources/assets/js/selectFx.js',
-//     'resources/assets/js/sticky.js',
-// ], 'public/assets/js/all-js.js');
-// mix.js('resources/assets/js/main.js', 'public/assets/js/main.js');
-// mix.js('resources/assets/js/modernizr-2.6.2.min.js', 'public/assets/js/modernizr-2.6.2.min.js');
+mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+])
+
+mix.styles('resources/assets/template/css/style.css', 'public/assets/template/css/style.css');
+mix.styles('resources/assets/template/css/style2.css', 'public/assets/template/css/style2.css');
+mix.styles('resources/assets/template/css/custom-heart.css', 'public/assets/template/css/custom-heart.css');
+mix.styles('resources/assets/template/css/header.css', 'public/assets/template/css/header.css');
+mix.styles('resources/assets/template/css/sb-admin-2.css', 'public/assets/template/css/sb-admin-2.css');
+mix.styles('resources/assets/template/css/superfish.css', 'public/assets/template/css/superfish.css');
+mix.styles('resources/assets/template/css/bookingForm.css', 'public/assets/template/css/bookingForm.css');
+mix.styles('resources/assets/template/css/create-tour.css', 'public/assets/template/css/create-tour.css');
+mix.styles('resources/assets/template/css/bootstrap.css', 'public/assets/template/css/bootstrap.css');
+mix.styles('resources/assets/template/css/sb-admin-2.css', 'public/assets/template/css/sb-admin-2.css');
+mix.styles('resources/assets/template/css/user_profile.css', 'public/assets/template/css/user_profile.css');
+
+
+mix.js('resources/assets/template/js/superfish.js', 'public/assets/template/js/superfish.js');
+mix.js('resources/assets/template/js/hoverIntent.js', 'public/assets/template/js/hoverIntent.js');
+mix.js('resources/assets/template/js/sb-admin-2.min.js', 'public/assets/template/js/sb-admin-2.min.js');
+mix.js('resources/assets/template/js/main.js', 'public/assets/template/js/main.js');
+mix.js('resources/assets/template/js/modernizr-2.6.2.min.js', 'public/assets/template/js/modernizr-2.6.2.min.js');

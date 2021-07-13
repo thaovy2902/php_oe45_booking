@@ -11,11 +11,29 @@ class Review extends Model
 
     protected $fillable = [
         'title',
-        'content1',
-        'content2',
-        'content3',
-        'status-public',
-        'account-id',
+        'content',
+        'count_like',
+        'account_id',
         'category_review_id',
     ];
+
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
+
+    public function categoryReview()
+    {
+        return $this->belongsTo(CategoryReview::class, 'category_review_id', 'id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'account_id', 'id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class, 'review_id', 'id');
+    }
 }

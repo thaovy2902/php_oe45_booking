@@ -11,8 +11,18 @@ class Rating extends Model
 
     protected $fillable = [
         'rating',
-        'status-rating',
-        'tour-id',
-        'account-id',
+        'status',
+        'tour_id',
+        'account_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'account_id', 'id');
+    }
+
+    public function tour()
+    {
+        return $this->belongsTo(Tour::class, 'tour_id', 'id');
+    }
 }
