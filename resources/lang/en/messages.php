@@ -79,4 +79,8 @@ return [
     'feedback3' => 'We will recommend Amerika Venture to our friends in the UK. Many thanks for a good trip.',
     'contact_info' => 'Contact Information',
     'send_msg' => 'Send Message',
+    'createSuccess' => 'Create successfull',
+    'deleteSuccess' => 'Delete successfull',
+    'deleteFail' => 'Delete fail',
+    'updateSuccess' => 'Update success',
 ];

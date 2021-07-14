@@ -17,4 +17,14 @@ class BookingTour extends Model
         'tour-id',
         'account-id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'account_id', 'id');
+    }
+
+    public function tour()
+    {
+        return $this->belongsTo(Tour::class, 'tour_id', 'id');
+    }
 }

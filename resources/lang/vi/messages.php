@@ -78,4 +78,8 @@ return [
     'feedback3' => 'Chuyến đi của chúng tôi rất thú vị, được thưởng noạn phong cảnh đẹp.',
     'contact_info' => 'Thông Tin Liên Hệ',
     'send_msg' => 'Gửi Đi',
+    'createSuccess' => 'Tạo thành công',
+    'deleteSuccess' => 'Xóa thành công',
+    'deleteFail' => 'Xóa thất bại',
+    'updateSuccess' => 'Cập nhật thành công',
 ];

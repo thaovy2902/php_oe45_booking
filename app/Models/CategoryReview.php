@@ -12,4 +12,9 @@ class CategoryReview extends Model
     protected $fillable = [
         'name-rv-cat',
     ];
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'category_review_id', 'id');
+    }
 }

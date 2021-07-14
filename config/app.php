@@ -230,4 +230,5 @@ return [
 
     ],
 
+    'image_tour' => 'assets/images/destinations/'
 ];
